@@ -494,6 +494,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 1.5rem;
 }
 .carte__cat-intro { color: var(--gris); font-style: italic; margin-top: -.75rem; margin-bottom: 1.5rem; font-weight: 600; }
+.carte__cat-note { font-size: .85rem; color: var(--gris); margin-top: 1rem; padding-top: .75rem; border-top: 1px solid var(--sable); }
 
 .carte__grid {
   display: grid;
