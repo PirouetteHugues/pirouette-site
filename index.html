@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pirouette — La pizza qui remue les sens · Nantes</title>
+  <meta name="description" content="Pizzeria à Nantes. Pizzas au levain, produits bio et locaux sourcés en direct auprès de producteurs locaux. Réservation en ligne." />
+  <link rel="canonical" href="https://www.pirouette-pizzeria.com/" />
+
+  <!-- Open Graph — partage WhatsApp, LinkedIn, Facebook -->
+  <meta property="og:type"        content="restaurant" />
+  <meta property="og:site_name"   content="Pirouette" />
+  <meta property="og:locale"      content="fr_FR" />
+  <meta property="og:url"         content="https://www.pirouette-pizzeria.com/" />
+  <meta property="og:title"       content="Pirouette — La pizza qui remue les sens · Nantes" />
+  <meta property="og:description" content="Pizzas au levain, produits bio et locaux à moins de 100 km. Des producteurs que l'on connaît par leur prénom. Place Royale, Nantes." />
+  <meta property="og:image"       content="https://www.pirouette-pizzeria.com/assets/og-image.jpg" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt"   content="Pirouette — Pizzeria à Nantes" />
+
+  <!-- Twitter Card (utilisé aussi par WhatsApp et iMessage) -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Pirouette — La pizza qui remue les sens · Nantes" />
+  <meta name="twitter:description" content="Pizzas au levain, produits bio et locaux à moins de 100 km. Place Royale, Nantes." />
+  <meta name="twitter:image"       content="https://www.pirouette-pizzeria.com/assets/og-image.jpg" />
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-47CC5P32QP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-47CC5P32QP');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" /></noscript>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="200x200" href="assets/favicon-200.png" />
+  <link rel="apple-touch-icon" href="assets/favicon-200.png" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Données structurées JSON-LD — Restaurant -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Pirouette",
+    "legalName": "PHILIA",
+    "description": "Pizzeria à Nantes. Pizzas au levain naturel, produits bio et locaux sourcés en direct auprès de producteurs à moins de 100 km.",
+    "url": "https://www.pirouette-pizzeria.com",
+    "telephone": "+33986675623",
+    "email": "bonjour@pirouette-pizzeria.com",
+    "servesCuisine": ["Pizza", "Cuisine italienne", "Bio & local"],
+    "priceRange": "€€",
+    "acceptsReservations": true,
+    "currenciesAccepted": "EUR",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "6 rue Racine",
+      "addressLocality": "Nantes",
+      "postalCode": "44000",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 47.2150,
+      "longitude": -1.5588
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "12:00",
+        "closes": "23:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday"],
+        "opens": "12:00",
+        "closes": "15:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/pirouette.nantes/",
+      "https://www.linkedin.com/company/pirouette-pizzeria"
+    ],
+    "image": "https://www.pirouette-pizzeria.com/assets/logo-signat.png",
+    "logo": "https://www.pirouette-pizzeria.com/assets/logo-seul.png",
+    "menu": "https://www.pirouette-pizzeria.com/#carte",
+    "hasMap": "https://maps.app.goo.gl/W5QTyNeT8FnSxZEU7"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav__logo">
+      <picture><source srcset="assets/logo-seul.webp" type="image/webp"><img src="assets/logo-seul.png" alt="Pirouette" /></picture>
+    </a>
+    <ul class="nav__links">
+      <li><a href="#carte">La carte</a></li>
+      <li><a href="#producteurs">Nos producteurs</a></li>
+      <li><a href="#infos">Contact</a></li>
+    </ul>
+    <a href="https://reservation.laddition.com/booking/pirouette#/date" target="_blank" rel="noopener" class="btn btn--nav">Réserver une table</a>
+    <button class="nav__burger" aria-label="Menu">&#9776;</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <!-- Pattern vivant — généré par JS -->
+    <div class="hero__living-pattern" id="livingPattern"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1 class="hero__logo-wrap">
+        <picture><source srcset="assets/logo-signat.webp" type="image/webp"><img src="assets/logo-signat.png" alt="Pirouette — La pizza qui remue les sens" class="hero__logo" fetchpriority="high" /></picture>
+      </h1>
+      <p class="hero__sub">Bio. Local. Et délicieux.</p>
+      <div class="hero__ctas">
+        <a href="https://reservation.laddition.com/booking/pirouette#/date" target="_blank" rel="noopener" class="btn btn--primary">Réserver une table</a>
+        <a href="https://commande-en-ligne.laddition.com/commande-en-ligne/pirouette" target="_blank" rel="noopener" class="btn btn--secondary">À emporter</a>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">↓</div>
+  </section>
+
+  <!-- CONCEPT -->
+  <section class="concept" id="concept">
+    <div class="container">
+      <h2 class="section-title">Une pirouette<br>dans votre assiette.</h2>
+      <p class="concept__text">
+        La pizza, le plat le plus aimé du monde — avec le goût du bon sens en plus.<br>
+        Des producteurs locaux, que l'on connaît par leur prénom.<br>
+        Bio, de saison, en direct. Et surtout : délicieux.
+      </p>
+    </div>
+  </section>
+
+  <!-- LIEU — galerie photos restaurant -->
+  <section class="lieu">
+    <div class="lieu__grid">
+      <div class="lieu__item lieu__item--tall">
+        <picture><source srcset="assets/lieu-facade.webp" type="image/webp"><img src="assets/lieu-facade.webp" alt="Façade Pirouette — terrasse Place Royale, Nantes" class="lieu__img" loading="lazy" style="object-position: center top" /></picture>
+      </div>
+      <div class="lieu__item">
+        <picture><source srcset="assets/lieu-interieur.webp" type="image/webp"><img src="assets/lieu-interieur.webp" alt="Salle Pirouette — vue intérieure" class="lieu__img" loading="lazy" /></picture>
+      </div>
+      <div class="lieu__item">
+        <picture><source srcset="assets/lieu-cocktail.webp" type="image/webp"><img src="assets/lieu-cocktail.webp" alt="Cocktail Pirouette devant le néon" class="lieu__img" loading="lazy" /></picture>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSITION — bande pattern fixe -->
+  <div class="section-transition section-transition--rect" data-pattern></div>
+
+  <!-- PRODUCTEURS -->
+  <section class="producteurs" id="producteurs">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Ceux qui nous nourrissent.</h2>
+        <p class="section-sub">On les connaît par leur prénom. On visite leurs fermes. Voici qui ils sont.</p>
+      </div>
+      <div class="producteurs__grid">
+
+        <!-- Cédric — Ferme des 7 Chemins -->
+        <div class="prod-card">
+          <div class="prod-card__photo">
+            <picture><source srcset="assets/photo-cedric.webp" type="image/webp"><img src="assets/photo-cedric.jpg" alt="Ferme des 7 Chemins" class="prod-card__portrait"  loading="lazy" /></picture>
+          </div>
+          <div class="prod-card__body">
+            <div class="prod-card__tag">Fromage · Plessé · 44</div>
+            <h3 class="prod-card__name"><span class="prod-card__prenom">Cédric, Matthieu & Hervé</span><br>Ferme des 7 Chemins</h3>
+            <p class="prod-card__text">45 vaches Bretonne Pie Noir élevées en bio à Plessé. Ils transforment leur lait en tomme, gwell, fromage blanc et crémeux. C'est le premier producteur qu'on a rencontré.</p>
+          </div>
+        </div>
+
+        <!-- Martin — Ferme du Bois Suzin -->
+        <div class="prod-card">
+          <div class="prod-card__photo">
+            <picture><source srcset="assets/photo-martin.webp" type="image/webp"><img src="assets/photo-martin.jpg" alt="Martin Briand" class="prod-card__portrait"  loading="lazy" /></picture>
+          </div>
+          <div class="prod-card__body">
+            <div class="prod-card__tag">Charcuterie · La Grigonnais · 44</div>
+            <h3 class="prod-card__name"><span class="prod-card__prenom">Martin & Cécilia</span><br>Ferme du Bois Suzin</h3>
+            <p class="prod-card__text">Leurs cochons vivent dehors, sur 72 hectares en bio. Depuis 2019, ils transforment tout eux-mêmes : jambon, coppa, chorizo, rillettes. Ça se sent dans l'assiette.</p>
+          </div>
+        </div>
+
+        <!-- Pascal & Gwenaëlle — Ferme de Grand Lieu -->
+        <div class="prod-card">
+          <div class="prod-card__photo">
+            <picture><source srcset="assets/photo-pascal-gwenaelle.webp" type="image/webp"><img src="assets/photo-pascal-gwenaelle.jpg" alt="Pascal et Gwenaëlle — Ferme de Grand Lieu" class="prod-card__portrait"  loading="lazy" /></picture>
+          </div>
+          <div class="prod-card__body">
+            <div class="prod-card__tag">Fromage · Saint-Lumine-de-Coutais · 44</div>
+            <h3 class="prod-card__name"><span class="prod-card__prenom">Pascal & Gwenaëlle</span><br>Ferme de Grand Lieu</h3>
+            <p class="prod-card__text">Au bord du lac de Grand Lieu, une cinquantaine de vaches pâturent 300 jours par an. Leur Tomme du Lac, affinée en cave naturelle, est l'âme de plusieurs de nos pizzas.</p>
+          </div>
+        </div>
+
+        <!-- Stéphanie — Ferme de Belchamp -->
+        <div class="prod-card">
+          <div class="prod-card__photo">
+            <picture><source srcset="assets/photo-stephanie-antoine.webp" type="image/webp"><img src="assets/photo-stephanie-antoine.jpg" alt="Stéphanie & Antoine — Ferme de Belchamp" class="prod-card__portrait" style="object-position: center 20%;"  loading="lazy" /></picture>
+          </div>
+          <div class="prod-card__body">
+            <div class="prod-card__tag">Fromage · Saffré · 44</div>
+            <h3 class="prod-card__name"><span class="prod-card__prenom">Stéphanie & Antoine</span><br>Ferme de Belchamp</h3>
+            <p class="prod-card__text">Bio depuis 1990, c'est une référence. Tomme, bleu persillé, fromage blanc — tout au lait cru. Leur bleu donne du caractère à la pizza Stéphanie.</p>
+          </div>
+        </div>
+
+        <!-- Julien — Frémont Fromages, Rougé -->
+        <div class="prod-card">
+          <div class="prod-card__photo">
+            <picture><source srcset="assets/photo-julien.webp" type="image/webp"><img src="assets/photo-julien.jpeg" alt="Julien Frémont" class="prod-card__portrait" style="object-position: center 15%;"  loading="lazy" /></picture>
+          </div>
+          <div class="prod-card__body">
+            <div class="prod-card__tag">Mozzarella & Camembert · Rougé · 44</div>
+            <h3 class="prod-card__name"><span class="prod-card__prenom">Julien</span><br>Frémont Fromages</h3>
+            <p class="prod-card__text">Fromager artisan installé à Rougé, Julien fabrique sa mozzarella fleur de lait et son camembert au lait cru moulé à la louche. La base de toutes nos pizzas, c'est lui.</p>
+          </div>
+        </div>
+
+        <!-- Stéphane — Moulin du Don -->
+        <div class="prod-card">
+          <div class="prod-card__photo">
+            <picture><source srcset="assets/photo-stephane.webp" type="image/webp"><img src="assets/photo-stephane.jpg" alt="Stéphane Lavigne" class="prod-card__portrait"  loading="lazy" /></picture>
+          </div>
+          <div class="prod-card__body">
+            <div class="prod-card__tag">Farine & Œufs · Marsac-sur-Don · 44</div>
+            <h3 class="prod-card__name"><span class="prod-card__prenom">Stéphane</span><br>Moulin du Don</h3>
+            <p class="prod-card__text">Bio depuis 1993, meunier et éleveur. Sa farine moulue sur pierre, c'est la pâte Pirouette. Ses 15 000 poules vivent sur 40 ha en agroforesterie.</p>
+          </div>
+        </div>
+
+        <!-- Aurélien — Chevrerie de Beauregard -->
+        <div class="prod-card">
+          <div class="prod-card__photo">
+            <picture><source srcset="assets/photo-aurelien-melanie.webp" type="image/webp"><img src="assets/photo-aurelien-melanie.jpg" alt="Aurélien et Mélanie — Chevrerie de Beauregard" class="prod-card__portrait"  loading="lazy" /></picture>
+          </div>
+          <div class="prod-card__body">
+            <div class="prod-card__tag">Chèvre · Le May-sur-Èvre · 49</div>
+            <h3 class="prod-card__name"><span class="prod-card__prenom">Aurélien & Mélanie</span><br>Chevrerie de Beauregard</h3>
+            <p class="prod-card__text">Une ferme bio à taille humaine, pensée pour l'autonomie et le pâturage. Aurélien façonne ses fromages au lait cru moulés à la louche. Leur chèvre frais, c'est l'âme de plusieurs de nos pizzas.</p>
+          </div>
+        </div>
+
+        <!-- François — Ferme Abillard -->
+        <div class="prod-card">
+          <div class="prod-card__photo">
+            <picture><source srcset="assets/photo-francois.webp" type="image/webp"><img src="assets/photo-francois.jpg" alt="François Abillard" class="prod-card__portrait"  loading="lazy" /></picture>
+          </div>
+          <div class="prod-card__body">
+            <div class="prod-card__tag">Légumes · Challans · 85</div>
+            <h3 class="prod-card__name"><span class="prod-card__prenom">François</span><br>Ferme Abillard</h3>
+            <p class="prod-card__text">3e génération à Challans, sur 20 hectares en bio. Plus de 50 variétés de légumes et fruits cultivés en rotation. Les légumes de saison de nos pizzas ont son adresse.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSITION — bande pattern fixe -->
+  <div class="section-transition section-transition--rect" data-pattern></div>
+
+  <!-- CARTE -->
+  <section class="carte" id="carte">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">La carte.</h2>
+        <p class="section-sub">Pâte au levain naturel, pétrie chaque matin.<br>Chaque pizza porte le prénom du producteur qui l'inspire.</p>
+        <a href="https://commande-en-ligne.laddition.com/commande-en-ligne/pirouette" target="_blank" rel="noopener" class="carte__emporter-banner">🥡 Une envie ? Commandez-la à emporter →</a>
+        <a href="assets/carte-pirouette.pdf" target="_blank" rel="noopener" class="carte__pdf-link">📄 Parcourir toute la carte (PDF)</a>
+      </div>
+
+      <!-- ENTRÉES -->
+      <div class="carte__category">
+        <h3 class="carte__cat-title">Entrées</h3>
+        <div class="carte__grid">
+          <div class="pizza-card">
+            <div class="pizza-card__content">
+              <div class="pizza-card__header"><span class="pizza-card__name">Pizzette à la Pirouette</span><span class="pizza-card__price">4€</span></div>
+              <p class="pizza-card__ingr">Pâte au levain naturel et à la sarriette · pistou maison</p>
+            </div>
+          </div>
+          <div class="pizza-card pizza-card--photo">
+            <picture><source srcset="assets/entree-oeuf-mayonnaise.webp" type="image/webp"><img src="assets/entree-oeuf-mayonnaise.png" alt="Œuf mayonnaise" class="pizza-card__img"  loading="lazy" /></picture>
+            <div class="pizza-card__content">
+              <div class="pizza-card__header"><span class="pizza-card__name">Œuf mayonnaise</span><span class="pizza-card__price">4€</span></div>
+              <p class="pizza-card__ingr">Œuf de la Ferme de Moquesouris · Mayonnaise maison · Salade</p>
+            </div>
+          </div>
+          <div class="pizza-card pizza-card--photo">
+            <picture><source srcset="assets/entree-rillette-porc.webp" type="image/webp"><img src="assets/entree-rillette-porc.png" alt="Rillette de porc" class="pizza-card__img"  loading="lazy" /></picture>
+            <div class="pizza-card__content">
+              <div class="pizza-card__header"><span class="pizza-card__name">Rillette de porc</span><span class="pizza-card__price">4,5€</span></div>
+              <p class="pizza-card__ingr">Préparée par Martin et Cécilia à La Grigonnais · Ferme du Bois Suzin · Pickles de légumes de saison · Pâte à l'origan</p>
+            </div>
+          </div>
+          <div class="pizza-card pizza-card--photo">
+            <picture><source srcset="assets/entree-camembert-roti.webp" type="image/webp"><img src="assets/entree-camembert-roti.png" alt="Camembert rôti" class="pizza-card__img"  loading="lazy" /></picture>
+            <div class="pizza-card__content">
+              <div class="pizza-card__header"><span class="pizza-card__name">Camembert Rôti</span><span class="pizza-card__price">15€</span></div>
+              <p class="pizza-card__ingr">Élaboré par Julien à Rougé · Miel de Loire-Atlantique · Graines de tournesol · Piment doux · Rôti dans notre four</p>
+            </div>
+          </div>
+          <div class="pizza-card pizza-card--photo">
+            <picture><source srcset="assets/entree-sucrine-pirouette.webp" type="image/webp"><img src="assets/entree-sucrine-pirouette.png" alt="Sucrine à la Pirouette" class="pizza-card__img"  loading="lazy" /></picture>
+            <div class="pizza-card__content">
+              <div class="pizza-card__header"><span class="pizza-card__name">Sucrine à la Pirouette</span><span class="pizza-card__price">7€</span></div>
+              <p class="pizza-card__ingr">Saisie au four · Gwell des 7 Chemins · Tomme de Grandlieu · Chapelure grillée · Herbes fraîches</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PIZZAS PERMANENTES -->
+      <div class="carte__category">
+        <h3 class="carte__cat-title">Pizzas</h3>
+        <div class="carte__grid">
+          <div class="pizza-card pizza-card--photo">
+            <picture><source srcset="assets/pizza-julien.webp" type="image/webp"><img src="assets/pizza-julien.jpg" alt="Pizza Julien" class="pizza-card__img"  loading="lazy" /></picture>
+            <div class="pizza-card__content">
+              <div class="pizza-card__header"><span class="pizza-card__name">Julien</span><span class="pizza-card__price">11,5€</span></div>
+              <p class="pizza-card__ingr">Tomate · Mozzarella Fleur de Lait de Rougé · Salade de saison</p>
+              <span class="badge badge--veg">Végétarien</span>
+            </div>
+          </div>
+          <div class="pizza-card pizza-card--photo">
+            <picture><source srcset="assets/pizza-martin.webp" type="image/webp"><img src="assets/pizza-martin.jpg" alt="Pizza Martin" class="pizza-card__img"  loading="lazy" /></picture>
+            <div class="pizza-card__content">
+              <div class="pizza-card__header"><span class="pizza-card__name">Martin</span><span class="pizza-card__price">14€</span></div>
+              <p class="pizza-card__ingr">Tomate · Mozzarella de Rougé · Jambon blanc du Bois Suzin · Champignons bruns</p>
+            </div>
+          </div>
+          <div class="pizza-card pizza-card--photo">
+            <picture><source srcset="assets/pizza-stephanie.webp" type="image/webp"><img src="assets/pizza-stephanie.jpg" alt="Pizza Stéphanie" class="pizza-card__img"  loading="lazy" /></picture>
+            <div class="pizza-card__content">
+              <div class="pizza-card__header"><span class="pizza-card__name">Stéphanie</span><span class="pizza-card__price">14,5€</span></div>
+              <p class="pizza-card__ingr">Tomate · Tomme de Belchamp · Saucisse au Muscadet · Crème de champignons · Salade</p>
+            </div>
+          </div>
+          <div class="pizza-card pizza-card--photo">
+            <picture><source srcset="assets/pizza-cedric.webp" type="image/webp"><img src="assets/pizza-cedric.jpg" alt="Pizza Cédric" class="pizza-card__img"  loading="lazy" /></picture>
+            <div class="pizza-card__content">
+              <div class="pizza-card__header"><span class="pizza-card__name">Cédric</span><span class="pizza-card__price">16,5€</span></div>
+              <p class="pizza-card__ingr">Tomate · Mozzarella de Rougé · Chorizo · Gwell poivré des 7 Chemins · Pickles d'oignons</p>
+            </div>
+          </div>
+          <div class="pizza-card pizza-card--photo">
+            <picture><source srcset="assets/pizza-mathieu.webp" type="image/webp"><img src="assets/pizza-mathieu.jpg" alt="Pizza Mathieu" class="pizza-card__img"  loading="lazy" /></picture>
+            <div class="pizza-card__content">
+              <div class="pizza-card__header"><span class="pizza-card__name">Mathieu</span><span class="pizza-card__price">17€</span></div>
+              <p class="pizza-card__ingr">Tomate · Mozzarella de Rougé · Crémeux des 7 Chemins · Bleu · Chèvre de Beauregard · Camembert de Rougé</p>
+              <span class="badge badge--veg">Végétarien</span>
+            </div>
+          </div>
+          <div class="pizza-card pizza-card--photo">
+            <picture><source srcset="assets/pizza-cecilia.webp" type="image/webp"><img src="assets/pizza-cecilia.jpg" alt="Pizza Cécilia" class="pizza-card__img"  loading="lazy" /></picture>
+            <div class="pizza-card__content">
+              <div class="pizza-card__header"><span class="pizza-card__name">Cécilia</span><span class="pizza-card__price">17,5€</span></div>
+              <p class="pizza-card__ingr">Tomate · Tomme de Grand Lieu · Chèvre frais · Coppa du Bois Suzin</p>
+            </div>
+          </div>
+          <div class="pizza-card pizza-card--photo pizza-card--signature">
+            <picture><source srcset="assets/pizza-pirouette.webp" type="image/webp"><img src="assets/pizza-pirouette.webp" alt="La Pirouette" class="pizza-card__img"  loading="lazy" /></picture>
+            <div class="pizza-card__content">
+              <div class="pizza-card__header"><span class="pizza-card__name">La Pirouette ⭐</span><span class="pizza-card__price">19€</span></div>
+              <p class="pizza-card__ingr">Tomate · Mozzarella de Rougé · Poitrine fumée du Bois Suzin · Œuf de Moquesouris · Gwell poivré des 7 Chemins · Miel de Loire-Atlantique · Pickles d'oignons · Sarriette</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PIZZAS DE SAISON -->
+      <div class="carte__category">
+        <h3 class="carte__cat-title">Pizzas de saison</h3>
+        <p class="carte__cat-intro">Notre carte change avec les saisons — et c'est tant mieux.</p>
+        <div class="carte__grid">
+          <div class="pizza-card pizza-card--photo">
+            <picture><source srcset="assets/pizza-pascal.webp" type="image/webp"><img src="assets/pizza-pascal.webp" alt="Pizza Pascal" class="pizza-card__img"  loading="lazy" style="object-position: center center" /></picture>
+            <div class="pizza-card__content">
+              <div class="pizza-card__header"><span class="pizza-card__name">Pascal</span><span class="pizza-card__price">15€</span></div>
+              <p class="pizza-card__ingr">Base aubergine · Sarrasin · Tomate cerise · Pickles de carotte · Houmous de mogette · Compotée d'oignon · Fleur comestible</p>
+              <span class="badge badge--vegan">Vegan</span>
+            </div>
+          </div>
+          <div class="pizza-card pizza-card--photo">
+            <picture><source srcset="assets/pizza-herve.webp" type="image/webp"><img src="assets/pizza-herve.jpg" alt="Pizza Hervé" class="pizza-card__img"  loading="lazy" /></picture>
+            <div class="pizza-card__content">
+              <div class="pizza-card__header"><span class="pizza-card__name">Hervé</span><span class="pizza-card__price">16€</span></div>
+              <p class="pizza-card__ingr">Base courgette · Chèvre frais · Crémeux des 7 Chemins · Gwell poivré · Pickles d'oignons · Ciboulette</p>
+              <span class="badge badge--veg">Végétarien</span>
+            </div>
+          </div>
+          <div class="pizza-card pizza-card--photo">
+            <picture><source srcset="assets/pizza-jeremy.webp" type="image/webp"><img src="assets/pizza-jeremy.webp" alt="Pizza Jérémy" class="pizza-card__img"  loading="lazy" /></picture>
+            <div class="pizza-card__content">
+              <div class="pizza-card__header"><span class="pizza-card__name">Jérémy</span><span class="pizza-card__price">17€</span></div>
+              <p class="pizza-card__ingr">Base courgette · Raclette de Grandlieu · Camembert de Rougé · Saucisse au Muscadet · Pickles d'oignons · Ciboulette</p>
+            </div>
+          </div>
+          <div class="pizza-card pizza-card--moment">
+            <div class="pizza-card__content">
+              <div class="pizza-card__header"><span class="pizza-card__name">La Pirouette du moment</span><span class="pizza-card__price"></span></div>
+              <p class="pizza-card__ingr">La création de notre pizzaïolo — change chaque mois selon ce que les producteurs nous apportent.</p>
+              <p class="pizza-card__ask">Demandez-nous ce que c'est ce soir.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SALADES -->
+      <div class="carte__category">
+        <h3 class="carte__cat-title">Salades</h3>
+        <div class="carte__grid">
+          <div class="pizza-card pizza-card--photo">
+            <picture><source srcset="assets/salade-erdre.webp" type="image/webp"><img src="assets/salade-erdre.webp" alt="Salade Erdre" class="pizza-card__img"  loading="lazy" /></picture>
+            <div class="pizza-card__content">
+              <div class="pizza-card__header"><span class="pizza-card__name">Erdre</span><span class="pizza-card__price">14€</span></div>
+              <p class="pizza-card__ingr">Roquette sauvage · Carottes en tagliatelles marinées citron & ail · Courgettes rôties · Radis rose · Pickles d'oignons rouges · Tomates cerises · Sauce mogette maison · Graines de tournesol · Coriandre</p>
+              <span class="badge badge--vegan">Vegan</span>
+            </div>
+          </div>
+          <div class="pizza-card pizza-card--photo">
+            <picture><source srcset="assets/salade-loire.webp" type="image/webp"><img src="assets/salade-loire.webp" alt="Salade Loire" class="pizza-card__img"  loading="lazy" /></picture>
+            <div class="pizza-card__content">
+              <div class="pizza-card__header"><span class="pizza-card__name">Loire</span><span class="pizza-card__price">15€</span></div>
+              <p class="pizza-card__ingr">Betteraves · Roquette sauvage · Carottes en tagliatelles marinées citron & ail · Chèvre frais de Beauregard · Tomme de Grandlieu · Graines de tournesol · Gwell à la menthe · Chapelure beurrée · Huile au miel</p>
+              <span class="badge badge--veg">Végétarien</span>
+            </div>
+          </div>
+          <div class="pizza-card pizza-card--photo">
+            <picture><source srcset="assets/salade-sevre.webp" type="image/webp"><img src="assets/salade-sevre.webp" alt="Salade Sèvre" class="pizza-card__img"  loading="lazy" /></picture>
+            <div class="pizza-card__content">
+              <div class="pizza-card__header"><span class="pizza-card__name">Sèvre</span><span class="pizza-card__price">17€</span></div>
+              <p class="pizza-card__ingr">Tomates anciennes · Tomates cerises · Pickles d'oignons rouges · Tomme de Grandlieu en dés · Coppa du Bois Suzin · Gwell citronné · Chapelure beurrée · Ciboulette · Graines de tournesol</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORMULES -->
+      <div class="carte__category">
+        <h3 class="carte__cat-title">Formules</h3>
+        <div class="formules__grid">
+          <div class="formule-card formule-card--photo">
+            <picture><source srcset="assets/formule-midinette.webp" type="image/webp"><img src="assets/formule-midinette.webp" alt="Formule Midinette" class="formule-card__img" loading="lazy" /></picture>
+            <div class="formule-card__content">
+              <div class="formule-card__header"><span class="formule-card__name">Formule Midinette</span><span class="formule-card__price">17,5€</span></div>
+              <p>½ pizza + ½ salade au choix, dans la même assiette + 1 chou au choix en dessert · Le midi uniquement</p>
+            </div>
+          </div>
+          <div class="formule-card">
+            <div class="formule-card__header"><span class="formule-card__name">Formule Midimidinette</span><span class="formule-card__price">19€</span></div>
+            <p>½ pizza + ½ salade au choix, dans la même assiette + 1 chou au choix + 1 café · Le midi uniquement</p>
+          </div>
+          <div class="formule-card">
+            <div class="formule-card__header"><span class="formule-card__name">Menu enfant</span><span class="formule-card__price">10,5€</span></div>
+            <p>1 sirop + 1 petite pizza + 1 dessert (mousse au chocolat ou 1 boule de glace)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESSERTS -->
+      <div class="carte__category">
+        <h3 class="carte__cat-title">Desserts</h3>
+        <p class="carte__cat-intro">Préparés chaque jour par notre équipe de pâtissiers.</p>
+        <div class="carte__grid">
+          <div class="pizza-card pizza-card--photo">
+            <picture><source srcset="assets/dessert-choux.webp" type="image/webp"><img src="assets/dessert-choux.webp" alt="Les choux Pirouette" class="pizza-card__img" loading="lazy" /></picture>
+            <div class="pizza-card__content">
+            <div class="pizza-card__header"><span class="pizza-card__name">Les choux</span><span class="pizza-card__price">2,5€ / 7€</span></div>
+            <p class="pizza-card__ingr">Caramel · chocolat · vanille · rose-framboise · citron-meringué · chou du mois</p>
+            <p class="pizza-card__ask">2,5€ l'unité · 7€ les 3</p>
+            </div>
+          </div>
+          <div class="pizza-card">
+            <div class="pizza-card__header"><span class="pizza-card__name">Panacotta</span><span class="pizza-card__price">8€</span></div>
+            <p class="pizza-card__ingr">À l'incroyable fromage blanc de la ferme des 7 Chemins · fraise de pleine terre de la Haye-Fouassière</p>
+          </div>
+          <div class="pizza-card">
+            <div class="pizza-card__header"><span class="pizza-card__name">Mousse au chocolat</span><span class="pizza-card__price">8€</span></div>
+          </div>
+          <div class="pizza-card">
+            <div class="pizza-card__header"><span class="pizza-card__name">Tiramisu au café</span><span class="pizza-card__price">8€</span></div>
+          </div>
+          <div class="pizza-card">
+            <div class="pizza-card__header"><span class="pizza-card__name">Profiteroles</span><span class="pizza-card__price">12€</span></div>
+            <p class="pizza-card__ingr">Des choux maison, la meilleure glace à la vanille du monde et des tonnes de chocolat</p>
+          </div>
+          <div class="pizza-card">
+            <div class="pizza-card__header"><span class="pizza-card__name">Café gourmand</span><span class="pizza-card__price">8€</span></div>
+            <p class="pizza-card__ingr">1 panna cotta · 1 chou · 1 petite mousse au chocolat · café au choix (espresso, allongé, americano)</p>
+          </div>
+          <div class="pizza-card">
+            <div class="pizza-card__header"><span class="pizza-card__name">Thé gourmand</span><span class="pizza-card__price">9,5€</span></div>
+            <p class="pizza-card__ingr">1 panna cotta · 1 chou · 1 petite mousse au chocolat · thé au choix</p>
+          </div>
+          <div class="pizza-card">
+            <div class="pizza-card__header"><span class="pizza-card__name">Boule de glace fermière</span><span class="pizza-card__price">3,5€ / 6,5€ / 9€</span></div>
+            <p class="pizza-card__ingr">Parfums : vanille · chocolat · cassis · passion · caramel beurre salé</p>
+            <p class="pizza-card__ask">1, 2 ou 3 boules</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carte__category">
+        <h3 class="carte__cat-title">Boissons</h3>
+        <p class="carte__cat-intro">Cocktails maison, vins bio et biodynamiques, softs faits ici.</p>
+        <div class="carte__grid">
+          <div class="pizza-card">
+            <div class="pizza-card__header"><span class="pizza-card__name">Cocktails maison</span><span class="pizza-card__price">9€ – 11,5€</span></div>
+            <p class="pizza-card__ingr">Sureau pétillant · Mojito Pirouette · Spritz · Basilic smash · Pirouette mule · Negroni</p>
+          </div>
+          <div class="pizza-card">
+            <div class="pizza-card__header"><span class="pizza-card__name">Softs maison</span><span class="pizza-card__price">4€ – 5€</span></div>
+            <p class="pizza-card__ingr">Limonade · Cola · Ginger Bird · Maté vert · Spritz sans alcool · Thé glacé · Figuette</p>
+          </div>
+          <div class="pizza-card">
+            <div class="pizza-card__header"><span class="pizza-card__name">Vins bio & biodynamiques</span><span class="pizza-card__price">—</span></div>
+            <p class="pizza-card__ingr">Blancs, rosés, rouges, pétillants — Cognettes, Hautes Noëlles, Jo Landron, Landron-Chartier, Domaine de l'Écu… + quelques belles références hors région</p>
+          </div>
+          <div class="pizza-card">
+            <div class="pizza-card__header"><span class="pizza-card__name">Bière & eau Pirouette</span><span class="pizza-card__price">à partir de 6€</span></div>
+            <p class="pizza-card__ingr">Brasserie du Bouffay (44) — Blonde ou Blanche · Eau plate ou pétillante microfiltrée et gazéifiée sur place</p>
+          </div>
+          <div class="pizza-card">
+            <div class="pizza-card__header"><span class="pizza-card__name">Cafés & thés</span><span class="pizza-card__price">2,1€ – 5,9€</span></div>
+            <p class="pizza-card__ingr">Torréfiés à Nantes · origine Mexique · Thés & infusions sélectionnés par Théine · tisanes récoltées par Violaine à Monbert (44)</p>
+          </div>
+          <div class="pizza-card">
+            <div class="pizza-card__header"><span class="pizza-card__name">Chocolat chaud Grimaud</span><span class="pizza-card__price">4,9€</span></div>
+            <p class="pizza-card__ingr">Véritable chocolat chaud — Hommage à la Maison Grimaud</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="carte__note">Une allergie ? Une préférence ? Parlez-en à notre équipe, on s'adapte.<br>Tous nos produits sont biologiques et sourcés auprès de producteurs locaux.</p>
+    </div>
+  </section>
+
+  <!-- TRANSITION — bande pattern fixe -->
+  <div class="section-transition section-transition--rect" data-pattern></div>
+
+  <!-- RÉSERVER -->
+  <section class="reserver" id="reserver">
+    <div class="reserver__pattern" style="background-image: url('assets/pattern-potimarron.webp')"></div>
+    <div class="reserver__overlay"></div>
+    <div class="container reserver__inner">
+      <h2 class="section-title section-title--light">À table.</h2>
+      <p class="section-sub section-sub--light">Réservez votre table ou commandez à emporter.</p>
+
+      <div class="reserver__tabs">
+        <button class="reserver__tab reserver__tab--active" data-tab="resa" type="button">Réserver une table</button>
+        <button class="reserver__tab" data-tab="emporter" type="button">Commander à emporter</button>
+      </div>
+
+      <div class="reserver__iframe-wrap" data-panel="resa">
+        <iframe
+          src="https://reservation.laddition.com/booking/pirouette#/date"
+          title="Réserver une table chez Pirouette"
+          class="reserver__iframe"
+          loading="lazy"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="reserver__iframe-wrap" data-panel="emporter" hidden>
+        <iframe
+          src="https://commande-en-ligne.laddition.com/commande-en-ligne/pirouette"
+          title="Commander à emporter chez Pirouette"
+          class="reserver__iframe"
+          loading="lazy"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <p class="reserver__note">Groupes de +8 personnes : <a href="tel:+33986675623" style="color:rgba(255,255,255,.85);text-decoration:underline;">appelez-nous directement</a></p>
+    </div>
+  </section>
+
+  <div class="section-transition section-transition--rect" data-pattern></div>
+
+  <!-- ÉVÉNEMENTS -->
+  <section class="evenements" id="evenements">
+    <div class="container">
+      <h2 class="section-title">Un événement qui a du goût ?</h2>
+      <p class="concept__text">
+        Anniversaire, repas d'entreprise, soirée privée…<br>
+        On fait des pirouettes pour vous.<br>
+        Dites-nous ce que vous avez en tête.
+      </p>
+      <a href="mailto:constance@pirouette-pizzeria.com" class="btn btn--outline">Nous écrire →</a>
+    </div>
+  </section>
+
+  <div class="section-transition section-transition--rect" data-pattern></div>
+
+  <!-- INFOS -->
+  <section class="infos" id="infos">
+    <div class="container">
+      <h2 class="section-title">Venez nous voir.</h2>
+      <div class="infos__grid">
+        <div class="infos__block">
+          <h3 class="infos__label">Adresse</h3>
+          <a href="https://maps.google.com/?q=4+rue+Vauban,+44000+Nantes" target="_blank" class="infos__value infos__value--link">Place Royale<br>4 rue Vauban<br>44000 Nantes</a>
+        </div>
+        <div class="infos__block">
+          <h3 class="infos__label">Horaires</h3>
+          <div class="infos__value">
+            <div class="horaire"><span>Lundi – Samedi</span><span>12h – 23h</span></div>
+            <div class="horaire"><span>Dimanche</span><span>12h – 15h</span></div>
+          </div>
+        </div>
+        <div class="infos__block">
+          <h3 class="infos__label">Contact</h3>
+          <div class="infos__value">
+            <a href="tel:+33986675623" class="infos__value--link">+33 9 86 67 56 23</a><br>
+            <a href="mailto:bonjour@pirouette-pizzeria.com" class="infos__value--link">bonjour@pirouette-pizzeria.com</a>
+          </div>
+        </div>
+        <div class="infos__block">
+          <h3 class="infos__label">Accès</h3>
+          <p class="infos__value">Tramway lignes 1 & 2<br>Arrêt Place Royale · à deux pas<br>Parking Place Royale ou<br>Parking Decré-Nation</p>
+        </div>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2664.207191153821!2d-1.561537923860121!3d47.21499821493779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ef1c34d797f3%3A0x89bce89a107f1bf9!2sPizzeria%20Pirouette!5e1!3m2!1sfr!2sfr!4v1780915774643!5m2!1sfr!2sfr" width="100%" height="400" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__logo-wrap">
+          <picture><source srcset="assets/logo-signat.webp" type="image/webp"><img src="assets/logo-signat.png" alt="Pirouette" class="footer__logo"  loading="lazy" /></picture>
+        </div>
+        <div class="footer__social">
+          <a href="https://commande-en-ligne.laddition.com/commande-en-ligne/pirouette" class="footer__social-link" target="_blank" rel="noopener">À emporter</a>
+          <a href="https://www.instagram.com/pirouette.nantes/" class="footer__social-link" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.linkedin.com/company/pirouette-pizzeria" class="footer__social-link" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Pirouette · 6 rue Racine, 44000 Nantes</p>
+        <div class="footer__legal">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="politique-confidentialite.html">Politique de confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

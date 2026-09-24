@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Pirouette</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Cormorant+Garamond:ital,wght@0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-404 {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-404__pattern {
+      position: absolute;
+      inset: 0;
+      background-color: var(--creme);
+      background-image: radial-gradient(ellipse 28px 32px at 50% 50%, #C8102E 98%, transparent 100%);
+      background-size: 90px 90px;
+      opacity: .07;
+    }
+    .page-404__content { position: relative; z-index: 2; max-width: 560px; }
+    .page-404__number {
+      font-family: var(--font-logo);
+      font-size: clamp(6rem, 20vw, 12rem);
+      color: var(--rouge);
+      line-height: 1;
+      opacity: .15;
+      margin-bottom: -2rem;
+    }
+    .page-404__title {
+      font-family: var(--font-logo);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--rouge);
+      margin-bottom: 1rem;
+    }
+    .page-404__sub {
+      font-style: italic;
+      color: var(--gris);
+      font-size: 1.15rem;
+      margin-bottom: 2.5rem;
+    }
+    .page-404__ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <div class="page-404">
+    <div class="page-404__pattern"></div>
+    <div class="page-404__content">
+      <div class="page-404__number">404</div>
+      <h1 class="page-404__title">Cette page a fait une pirouette et a disparu.</h1>
+      <p class="page-404__sub">Pas de panique — nos pizzas, elles, sont bien là.</p>
+      <div class="page-404__ctas">
+        <a href="index.html" class="btn btn--primary">Retour à l'accueil</a>
+        <a href="index.html#carte" class="btn btn--ghost">Voir la carte</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

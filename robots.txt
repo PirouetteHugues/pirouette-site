@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.pirouette-pizzeria.com/sitemap.xml
