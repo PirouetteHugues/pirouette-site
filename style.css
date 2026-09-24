@@ -634,6 +634,19 @@ img { max-width: 100%; display: block; }
 .reserver__tab--active:hover { background: var(--creme); }
 
 /* Bandeau "à emporter" sous le sous-titre carte */
+.carte__saison-badge {
+  display: inline-block;
+  margin-top: .75rem;
+  padding: .3rem .9rem;
+  background: var(--sable);
+  border-radius: 20px;
+  color: var(--brun);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
 .carte__emporter-banner {
   display: inline-block;
   margin-top: 1rem;
