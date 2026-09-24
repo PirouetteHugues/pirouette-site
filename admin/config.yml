@@ -1,0 +1,138 @@
+backend:
+  name: github
+  repo: OWNER/pirouette-site   # ← À remplacer par ton pseudo GitHub / pirouette-site
+  branch: main
+
+media_folder: "assets"
+public_folder: "/assets"
+
+# Langue de l'interface
+locale: fr
+
+collections:
+
+  # ─── PRODUCTEURS ───────────────────────────────────────────────
+  - name: "producteurs"
+    label: "Producteurs"
+    label_singular: "Producteur"
+    description: "Les producteurs affichés sur la page d'accueil (section 'Ceux qui nous nourrissent')"
+    folder: "_data/producteurs"
+    create: true
+    slug: "{{prenom | slugify}}"
+    fields:
+      - { label: "Prénom(s)", name: "prenom", widget: "string", hint: "Ex: Cédric, Matthieu & Hervé" }
+      - { label: "Ferme / Exploitation", name: "ferme", widget: "string", hint: "Ex: Ferme des 7 Chemins" }
+      - { label: "Catégorie", name: "categorie", widget: "string", hint: "Ex: Fromage · Plessé · 44" }
+      - { label: "Texte de présentation", name: "texte", widget: "text" }
+      - { label: "Photo", name: "photo", widget: "image", hint: "Format portrait recommandé" }
+      - { label: "Afficher sur le site", name: "actif", widget: "boolean", default: true }
+      - { label: "Ordre d'affichage", name: "ordre", widget: "number", default: 99 }
+
+  # ─── PIZZAS ─────────────────────────────────────────────────────
+  - name: "pizzas"
+    label: "Pizzas"
+    label_singular: "Pizza"
+    description: "Toutes les pizzas de la carte. Modifiez noms, ingrédients et prix ici."
+    folder: "_data/pizzas"
+    create: true
+    slug: "{{nom | slugify}}"
+    fields:
+      - { label: "Nom de la pizza", name: "nom", widget: "string" }
+      - { label: "Prix (€)", name: "prix", widget: "number", value_type: "float", step: 0.5 }
+      - { label: "Ingrédients", name: "ingredients", widget: "text", hint: "Séparer les ingrédients par · (point médian)" }
+      - label: "Catégorie"
+        name: "categorie"
+        widget: "select"
+        options:
+          - { label: "Classiques", value: "classiques" }
+          - { label: "Saison", value: "saison" }
+          - { label: "Pizza du moment", value: "moment" }
+      - label: "Badge"
+        name: "badge"
+        widget: "select"
+        required: false
+        options:
+          - { label: "Aucun", value: "" }
+          - { label: "Végétarien", value: "vegetarien" }
+          - { label: "Vegan", value: "vegan" }
+          - { label: "Nouveau", value: "nouveau" }
+      - { label: "Photo", name: "photo", widget: "image", required: false }
+      - { label: "Afficher sur le site", name: "actif", widget: "boolean", default: true }
+      - { label: "Ordre d'affichage", name: "ordre", widget: "number", default: 99 }
+
+  # ─── ENTRÉES ────────────────────────────────────────────────────
+  - name: "entrees"
+    label: "Entrées"
+    label_singular: "Entrée"
+    folder: "_data/entrees"
+    create: true
+    slug: "{{nom | slugify}}"
+    fields:
+      - { label: "Nom", name: "nom", widget: "string" }
+      - { label: "Prix (€)", name: "prix", widget: "number", value_type: "float", step: 0.5 }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Photo", name: "photo", widget: "image", required: false }
+      - { label: "Afficher sur le site", name: "actif", widget: "boolean", default: true }
+
+  # ─── SALADES ────────────────────────────────────────────────────
+  - name: "salades"
+    label: "Salades"
+    label_singular: "Salade"
+    folder: "_data/salades"
+    create: true
+    slug: "{{nom | slugify}}"
+    fields:
+      - { label: "Nom", name: "nom", widget: "string" }
+      - { label: "Prix (€)", name: "prix", widget: "number", value_type: "float", step: 0.5 }
+      - { label: "Ingrédients", name: "ingredients", widget: "text" }
+      - label: "Badge"
+        name: "badge"
+        widget: "select"
+        required: false
+        options:
+          - { label: "Aucun", value: "" }
+          - { label: "Végétarien", value: "vegetarien" }
+          - { label: "Vegan", value: "vegan" }
+      - { label: "Photo", name: "photo", widget: "image", required: false }
+      - { label: "Afficher sur le site", name: "actif", widget: "boolean", default: true }
+
+  # ─── DESSERTS ───────────────────────────────────────────────────
+  - name: "desserts"
+    label: "Desserts"
+    label_singular: "Dessert"
+    folder: "_data/desserts"
+    create: true
+    slug: "{{nom | slugify}}"
+    fields:
+      - { label: "Nom", name: "nom", widget: "string" }
+      - { label: "Prix", name: "prix", widget: "string", hint: "Ex: 6€ ou 3,50€ / 6€ / 8€" }
+      - { label: "Description", name: "description", widget: "text" }
+      - label: "Badge"
+        name: "badge"
+        widget: "select"
+        required: false
+        options:
+          - { label: "Aucun", value: "" }
+          - { label: "Vegan", value: "vegan" }
+      - { label: "Afficher sur le site", name: "actif", widget: "boolean", default: true }
+
+  # ─── INFOS PRATIQUES ────────────────────────────────────────────
+  - name: "infos"
+    label: "Infos pratiques"
+    description: "Horaires, adresse, contact — modifiables sans toucher au code"
+    files:
+      - label: "Infos du restaurant"
+        name: "restaurant"
+        file: "_data/infos.json"
+        fields:
+          - { label: "Téléphone", name: "telephone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - label: "Horaires"
+            name: "horaires"
+            widget: "list"
+            fields:
+              - { label: "Jours", name: "jours", widget: "string", hint: "Ex: Lundi – Samedi" }
+              - { label: "Heures", name: "heures", widget: "string", hint: "Ex: 12h – 23h" }
+          - { label: "Lien réservation", name: "lien_reservation", widget: "string" }
+          - { label: "Lien commande à emporter", name: "lien_emporter", widget: "string" }
+          - { label: "Message d'accueil (hero)", name: "hero_sub", widget: "string", hint: "La ligne sous le logo dans le hero" }
