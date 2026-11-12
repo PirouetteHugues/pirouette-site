@@ -550,6 +550,84 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============================================================
+   ÉPICERIE & À EMPORTER
+============================================================ */
+.epicerie { background: var(--creme); padding: 5rem 0; }
+
+.epicerie__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-top: 3rem;
+}
+
+.epicerie__photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.epicerie__photo {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.epicerie__photo--main { margin-top: 2rem; }
+
+.epicerie__cats { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2.5rem; }
+
+.epicerie__cat {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.epicerie__cat-icon {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  flex-shrink: 0;
+  width: 2rem;
+  text-align: center;
+}
+
+.epicerie__cat strong {
+  display: block;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--encre);
+  margin-bottom: .2rem;
+}
+
+.epicerie__cat p {
+  font-size: .9rem;
+  color: var(--gris);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.epicerie__lieu {
+  font-size: .88rem;
+  color: var(--gris);
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  background: var(--sable);
+  border-radius: 4px;
+  border-left: 3px solid var(--rouge);
+}
+
+.epicerie__ctas { display: flex; flex-direction: column; gap: .75rem; }
+
+@media (max-width: 768px) {
+  .epicerie__grid { grid-template-columns: 1fr; gap: 2rem; }
+  .epicerie__photos { grid-template-columns: 1fr 1fr; }
+  .epicerie__photo--main { margin-top: 0; }
+}
+
+/* ============================================================
    RÉSERVER
 ============================================================ */
 .reserver {
