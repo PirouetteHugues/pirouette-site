@@ -776,6 +776,14 @@ img { max-width: 100%; display: block; }
 .infos__value--link { text-decoration: underline; text-decoration-color: var(--rouge); text-underline-offset: 3px; }
 .infos__value--link:hover { color: var(--rouge); }
 .horaire { display: flex; justify-content: space-between; gap: 1rem; padding: .35rem 0; border-bottom: 1px solid rgba(0,0,0,.1); }
+.horaire__detail { margin-top: .6rem; display: flex; flex-direction: column; gap: .2rem; padding: .6rem .75rem; background: var(--sable); border-radius: 6px; }
+.horaire__service { display: flex; align-items: center; gap: .55rem; font-size: .82rem; color: var(--encre); padding: .2rem 0; }
+.horaire__service span:last-child { margin-left: auto; font-weight: 600; white-space: nowrap; }
+.horaire__service--salon { color: var(--brun); }
+.horaire__dot { width: 7px; height: 7px; border-radius: 50%; background: var(--rouge); flex-shrink: 0; }
+.horaire__dot--salon { background: var(--brun); }
+.horaire__note { font-size: .75rem; color: var(--gris); font-style: italic; }
+.horaire__aside { margin-top: .75rem; font-size: .8rem; color: var(--gris); font-style: italic; line-height: 1.4; border-left: 2px solid var(--rouge); padding-left: .6rem; }
 .map-container {
   border-radius: var(--radius);
   overflow: hidden;
